@@ -36,8 +36,6 @@ const exhibitions = [
       "/EXHIBITIONS/WAM Saudi 2026/photo_2026-02-26_21-34-05.jpg",
       "/EXHIBITIONS/WAM Saudi 2026/photo_2026-02-26_21-34-08.jpg",
       "/EXHIBITIONS/WAM Saudi 2026/photo_2026-02-26_21-34-10.jpg",
-      "/EXHIBITIONS/WAM Saudi 2026/photo_2026-02-26_21-34-15.jpg",
-      "/EXHIBITIONS/WAM Saudi 2026/photo_2026-02-26_21-34-18.jpg",
       "/EXHIBITIONS/WAM Saudi 2026/photo_2026-02-26_21-34-20.jpg",
       "/EXHIBITIONS/WAM Saudi 2026/photo_2026-02-26_21-34-22.jpg",
       "/EXHIBITIONS/WAM Saudi 2026/photo_2026-02-26_21-57-39.jpg",

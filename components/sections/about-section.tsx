@@ -41,14 +41,16 @@ const certifications = [
     fullName: "Certified SOLIDWORKS Professional",
     id: "C-Q5ZMUKCNBH",
     pdf: "/CERTIFICATIONS/CSWP_Certificate_C-Q5ZMUKCNBH.pdf",
-    issuer: "Dassault Systèmes"
+    issuer: "Dassault Systèmes",
+    image: "/Gallery/1.jpeg"
   },
   {
     title: "CSWA",
     fullName: "Certified SOLIDWORKS Associate",
     id: "C-Y7A2KRMQ54",
     pdf: "/CERTIFICATIONS/CSWA_Certificate_C-Y7A2KRMQ54.pdf",
-    issuer: "Dassault Systèmes"
+    issuer: "Dassault Systèmes",
+    image: "/Gallery/2.jpeg"
   }
 ]
 
@@ -128,14 +130,26 @@ export function AboutSection() {
               
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-bold text-foreground leading-tight group-hover:text-primary transition-colors">B.S. Mechatronics Engineering</h4>
-                  <p className="text-sm text-muted-foreground mt-2">MSA University & University of Greenwich</p>
+                  <h4 className="text-lg font-bold text-foreground leading-tight group-hover:text-primary transition-colors">B.S. in Mechatronics Engineering</h4>
+                  <p className="text-sm text-muted-foreground mt-1">MSA University, Giza, Egypt</p>
+                  <p className="text-[10px] font-medium text-primary/80 uppercase tracking-widest mt-2">Sep 2018 – Jul 2023</p>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3 text-sm font-semibold">
                     <Award className="h-4 w-4 text-primary" />
                     GPA: 3.94 / 4.00
                   </div>
+                  <div className="flex items-center gap-3 text-sm font-semibold">
+                    <Trophy className="h-4 w-4 text-primary" />
+                    Ranked 2nd in cohort
+                  </div>
+                </div>
+
+                <div className="pt-4 border-t border-white/5">
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-2">Graduation Project</p>
+                  <p className="text-xs text-foreground leading-relaxed italic">
+                    Flight Simulator Motion Cueing Platform & Active Pilot Controls System
+                  </p>
                 </div>
               </div>
             </div>
@@ -165,11 +179,25 @@ export function AboutSection() {
                       rel="noopener noreferrer"
                       className="flex items-center justify-between p-5 rounded-2xl bg-white/5 border border-white/5 hover:border-primary/50 transition-all group/cert"
                     >
-                      <div>
-                        <h4 className="font-bold text-primary text-lg tracking-tight mb-1">{cert.title}</h4>
-                        <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-widest">{cert.fullName}</p>
+                      <div className="flex items-center gap-4">
+                        <div>
+                          <h4 className="font-bold text-primary text-lg tracking-tight mb-1">{cert.title}</h4>
+                          <p className="text-[10px] text-muted-foreground uppercase font-bold tracking-widest">{cert.fullName}</p>
+                        </div>
                       </div>
-                      <ExternalLink className="h-4 w-4 text-primary opacity-0 group-hover/cert:opacity-100 transition-opacity translate-x-2 group-hover:translate-x-0 transition-transform duration-300" />
+                      
+                      <div className="flex items-center gap-4">
+                        {cert.image && (
+                          <div className="hidden sm:block relative w-20 h-14 rounded-lg overflow-hidden border border-white/10 shadow-lg">
+                            <img 
+                              src={cert.image} 
+                              alt={cert.title} 
+                              className="w-full h-full object-cover transition-transform duration-500 group-hover/cert:scale-110" 
+                            />
+                          </div>
+                        )}
+                        <ExternalLink className="h-4 w-4 text-primary opacity-0 group-hover/cert:opacity-100 transition-opacity translate-x-2 group-hover:translate-x-0 transition-transform duration-300 shrink-0" />
+                      </div>
                     </a>
                   ))}
                 </div>

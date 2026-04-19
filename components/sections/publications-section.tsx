@@ -24,6 +24,7 @@ const items = [
     institution: "Nile University",
     highlight: "1st Place",   
     tags: ["Robotics", "Flight Simulation", "Engineering Excellence"],
+    image: "/Gallery/Essam1.jpeg",
   },
   {
     type: "publication",
@@ -156,7 +157,7 @@ export function PublicationsSection() {
                 {/* Optional Image / Visual Side */}
                 {(item.image || item.type === 'achievement') && (
                   <div className="lg:w-1/3 flex items-center justify-center">
-                    <div className={`relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 ${item.type === 'achievement' ? 'bg-primary/10 flex items-center justify-center' : ''}`}>
+                    <div className={`relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 ${item.type === 'achievement' && !item.image ? 'bg-primary/10 flex items-center justify-center' : ''}`}>
                        {item.image ? (
                         <img
                          src={item.image}

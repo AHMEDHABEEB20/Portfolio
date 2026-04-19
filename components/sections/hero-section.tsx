@@ -111,7 +111,7 @@ export function HeroSection() {
               className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_0_30px_rgba(var(--primary),0.3)] hover:shadow-[0_0_50px_rgba(var(--primary),0.5)] transition-all duration-300 rounded-full px-8 h-14 text-base font-bold group relative overflow-hidden"
               asChild
             >
-              <a href="/Ahmad_Essameldin_Resume_US_2025.pdf" download>
+              <a href="/Ahmad_Essameldin_Resume_2026.pdf" download>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                 <span className="relative z-10 flex items-center gap-2">
                   <Download className="h-5 w-5 group-hover:-translate-y-1 transition-transform duration-300" />

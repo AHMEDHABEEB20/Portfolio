@@ -34,7 +34,7 @@ const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Saint Paul, Minnesota, USA",
+    value: "New Cairo, Egypt",
     href: null,
   },
 ]

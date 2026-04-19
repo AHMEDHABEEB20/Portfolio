@@ -16,23 +16,39 @@ import {
   ShieldCheck,
   Zap,
   DraftingCompass,
-  Laptop
+  Laptop,
+  Palette,
+  Factory,
+  Activity,
+  ClipboardList
 } from "lucide-react"
 
 const technicalSkills = [
-  // Design & Modeling
-  { name: "SolidWorks", level: 95, icon: DraftingCompass, description: "Advanced Assemblies & Surfacing" },
-  { name: "AutoCAD", level: 90, icon: Pencil, description: "Precision 2D Drafting" },
-  { name: "Autodesk Fusion 360", level: 85, icon: Laptop, description: "Cloud-based CAD/CAM" },
-  { name: "Inventor", level: 80, icon: Cog, description: "Parametric Part Design" },
-  // Intelligence & Analysis
+  // CAD & Design
+  { name: "SolidWorks (CSWP)", level: 95, icon: DraftingCompass, description: "Advanced Assemblies & Surfacing" },
+  { name: "Fusion 360", level: 90, icon: Laptop, description: "Cloud-based CAD/CAM" },
+  { name: "Autodesk Inventor", level: 85, icon: Cog, description: "Parametric Part Design" },
+  { name: "Blender", level: 80, icon: Palette, description: "3D Modeling & Animation" },
+  // Simulation & Analysis
+  { name: "MATLAB & Simscape", level: 90, icon: Activity, description: "Control System Modeling" },
   { name: "FEA Analysis", level: 85, icon: BarChart3, description: "Structural & Thermal Simulation" },
-  { name: "Robotics", level: 90, icon: Cpu, description: "System Architecture & Integration" },
-  { name: "Arduino", level: 88, icon: Zap, description: "C++ Microcontroller Coding" },
-  // Manufacturing & Tools
+  { name: "KUKA Process Simulate", level: 88, icon: Cpu, description: "Robot Workspace Simulation" },
+  { name: "Yaskawa Simulation", level: 85, icon: Zap, description: "Industrial Robot Setup" },
+  // Visualization & Rendering
+  { name: "KeyShot", level: 90, icon: Palette, description: "Photorealistic Rendering" },
+  { name: "DaVinci Resolve", level: 85, icon: Presentation, description: "Post-Production & Color" },
+  // Manufacturing & Standards
+  { name: "DFM / DFA", level: 92, icon: Factory, description: "Design for Manufacture" },
+  { name: "GD&T", level: 90, icon: Pencil, description: "ISO/ASME Standard Drafting" },
   { name: "CNC Machining", level: 85, icon: Wrench, description: "G-Code & Protocol Prep" },
-  { name: "Prototyping", level: 90, icon: Cog, description: "Rapid Iteration & Assembly" },
-  { name: "Manufacturing", level: 85, icon: Wrench, description: "Industrial Production Prep" },
+  // Robot Brands
+  { name: "KUKA Robots", level: 92, icon: Cpu, description: "Integration & Programming" },
+  { name: "Yaskawa Robots", level: 90, icon: Zap, description: "Industrial Automation" },
+  { name: "Mitsubishi Robots", level: 82, icon: Cog, description: "Factory Integration" },
+  // Productivity & Planning
+  { name: "Notion", level: 95, icon: ClipboardList, description: "Project & Knowledge Mgmt" },
+  { name: "Microsoft Excel", level: 92, icon: BarChart3, description: "Data Analysis & Logic" },
+  { name: "Technical Presentations", level: 90, icon: Presentation, description: "Communication & Delivery" },
 ]
 
 const softSkills = [
@@ -89,7 +105,7 @@ export function SkillsSection() {
           </h2>
         </motion.div>
 
-        {/* Top Row: Professional Mastery - More Compact Layout */}
+        {/* Top Row: Professional Mastery */}
         <div className="mb-20">
           <div className="flex items-center gap-4 mb-10 w-fit mx-auto lg:mx-0">
             <h3 className="text-sm font-bold uppercase tracking-widest text-primary shrink-0 flex items-center gap-3">
@@ -99,7 +115,7 @@ export function SkillsSection() {
             <div className="h-px w-24 bg-gradient-to-r from-primary/30 to-transparent" />
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto lg:mx-0">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {softSkills.map((skill, index) => (
               <motion.div
                 key={skill.name}
@@ -120,7 +136,7 @@ export function SkillsSection() {
           </div>
         </div>
 
-        {/* Bottom Area: Technical Skills - Remains Robust */}
+        {/* Bottom Area: Technical Stack */}
         <div>
            <div className="flex items-center gap-4 mb-10 w-fit mx-auto lg:mx-0">
             <h3 className="text-sm font-bold uppercase tracking-widest text-primary shrink-0 flex items-center gap-3">

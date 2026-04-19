@@ -52,11 +52,11 @@ export function ProjectsSection() {
                 ARIA
               </TabsTrigger>
               <TabsTrigger
-                value="UNIVERSITY"
+                value="Academic"
                 className="flex items-center gap-2.5 px-6 py-3 rounded-lg text-sm font-semibold transition-all data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-lg data-[state=inactive]:text-muted-foreground/60 hover:text-foreground"
               >
                 <GraduationCap className="h-4 w-4" />
-                UNIVERSITY
+                Academic
               </TabsTrigger>
             </TabsList>
           </div>

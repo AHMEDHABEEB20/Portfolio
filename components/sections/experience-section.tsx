@@ -3,38 +3,11 @@
 import { motion } from "framer-motion"
 import { useInView } from "framer-motion"
 import { useRef } from "react"
-import { Building2, TrendingDown, Zap, Clock, Shield } from "lucide-react"
+import { Building2 } from "lucide-react"
 
 export function ExperienceSection() {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
-
-  const achievements = [
-    {
-      icon: TrendingDown,
-      value: "30%",
-      label: "Cost Reduction",
-      description: "Reduced lead time and outsourcing costs through in-house CNC machining",
-    },
-    {
-      icon: Zap,
-      value: "25%",
-      label: "Efficiency Boost",
-      description: "Increased design efficiency through implementing new CAD software tools",
-    },
-    {
-      icon: Clock,
-      value: "$200k",
-      label: "Annual Savings",
-      description: "Improved project delivery time by 15% by streamlining design workflow",
-    },
-    {
-      icon: Shield,
-      value: "40%",
-      label: "Lifespan Increase",
-      description: "Enhanced product lifespan by integrating advanced FEA simulations",
-    },
-  ]
 
   const responsibilities = [
     "Design and develop mechanical systems and assemblies for robotic automation projects, including the Aria Robot P60",
@@ -82,7 +55,7 @@ export function ExperienceSection() {
             </div>
             <div className="flex items-center gap-2 text-muted-foreground">
               <span className="px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                Hybrid
+                Full-time
               </span>
               <span className="text-sm">Aug 2023 - Present</span>
             </div>
@@ -110,24 +83,6 @@ export function ExperienceSection() {
 
         {/* Achievements Grid */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {achievements.map((achievement, index) => (
-            <motion.div
-              key={achievement.label}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-              className="glass rounded-xl p-6 text-center group hover:border-primary/50 transition-all duration-300 glow-border"
-            >
-              <div className="inline-flex p-3 rounded-lg bg-primary/10 text-primary mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                <achievement.icon className="h-6 w-6" />
-              </div>
-              <div className="text-3xl font-bold text-primary glow-text mb-1">
-                {achievement.value}
-              </div>
-              <div className="font-semibold text-foreground mb-2">{achievement.label}</div>
-              <p className="text-sm text-muted-foreground">{achievement.description}</p>
-            </motion.div>
-          ))}
         </div>
 
         {/* Timeline decoration */}

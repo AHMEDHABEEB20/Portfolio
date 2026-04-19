@@ -21,7 +21,7 @@ export type Project = {
   title: string
   subtitle: string
   description: string
-  category: "ARIA" | "UNIVERSITY"
+  category: "ARIA" | "Academic"
   icon: LucideIcon
   image: string
   tags: string[]
@@ -82,7 +82,7 @@ export const projects: Project[] = [
   },
   {
     icon: Cpu,
-    category: "UNIVERSITY",
+    category: "Academic",
     image: "/FFB Yoke Iteration 3_2 v622.png",
     title: "AI Real-Time Gesture Prosthetic",
     subtitle: "Computer Vision Control (Gen.1)",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
   },
   {
     icon: Printer,
-    category: "UNIVERSITY",
+    category: "Academic",
     image: "/FFB Yoke Iteration 3_2 v622.png",
     title: "Custom 3D Printer Design",
     subtitle: "FDM Prototyping Machine",
