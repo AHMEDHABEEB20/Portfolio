@@ -188,7 +188,7 @@ export function AboutSection() {
                       
                       <div className="flex items-center gap-4">
                         {cert.image && (
-                          <div className="hidden sm:block relative w-20 h-14 rounded-lg overflow-hidden border border-white/10 shadow-lg">
+                          <div className="relative w-16 h-12 sm:w-20 sm:h-14 rounded-lg overflow-hidden border border-white/10 shadow-lg shrink-0">
                             <img 
                               src={cert.image} 
                               alt={cert.title} 
