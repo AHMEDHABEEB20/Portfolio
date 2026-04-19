@@ -46,17 +46,17 @@ export function ExperienceSection() {
   ]
 
   return (
-    <section id="experience" className="py-24 md:py-32 relative" ref={ref}>
+    <section id="experience" className="py-12 md:py-16 relative" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
-          className="mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">
-            Work <span className="text-primary">Experience</span>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase">
+            Work Experience
           </h2>
         </motion.div>
 

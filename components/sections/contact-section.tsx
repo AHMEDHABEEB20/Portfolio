@@ -60,7 +60,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-24 md:py-32 relative" ref={ref}>
+    <section id="contact" className="py-12 md:py-16 relative" ref={ref}>
       <div className="container mx-auto px-4 md:px-6">
         {/* Section header */}
         <motion.div
@@ -69,7 +69,7 @@ export function ContactSection() {
           transition={{ duration: 0.5 }}
           className="mb-16 text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mt-2">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight uppercase">
             Get In <span className="text-primary">Touch</span>
           </h2>
           <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
@@ -99,26 +99,28 @@ export function ContactSection() {
                       href={item.href}
                       target={item.href.startsWith("http") ? "_blank" : undefined}
                       rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                      className="glass rounded-xl p-4 flex items-center gap-4 group hover:border-primary/50 transition-all duration-300 glow-border block"
+                      className="glass-dark border border-primary/20 bg-primary/[0.02] hover:bg-primary/[0.05] rounded-3xl p-6 transition-colors relative group overflow-hidden flex items-center gap-6 block"
                     >
-                      <div className="p-3 rounded-lg bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-                        <item.icon className="h-5 w-5" />
+                      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/20 transition-all opacity-0 group-hover:opacity-100" />
+                      <div className="w-14 h-14 rounded-2xl bg-primary flex-shrink-0 flex items-center justify-center text-primary-foreground shadow-xl shadow-primary/30 relative z-10 transition-transform group-hover:scale-105">
+                        <item.icon className="h-6 w-6" />
                       </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">{item.label}</p>
-                        <p className="font-medium text-foreground group-hover:text-primary transition-colors">
+                      <div className="relative z-10 overflow-hidden">
+                        <p className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-1">{item.label}</p>
+                        <p className="font-bold text-lg text-foreground group-hover:text-primary transition-colors truncate">
                           {item.value}
                         </p>
                       </div>
                     </a>
                   ) : (
-                    <div className="glass rounded-xl p-4 flex items-center gap-4 glow-border">
-                      <div className="p-3 rounded-lg bg-primary/10 text-primary">
-                        <item.icon className="h-5 w-5" />
+                    <div className="glass-dark border border-primary/20 bg-primary/[0.02] hover:bg-primary/[0.05] rounded-3xl p-6 transition-colors relative group overflow-hidden flex items-center gap-6">
+                      <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl pointer-events-none group-hover:bg-primary/20 transition-all opacity-0 group-hover:opacity-100" />
+                      <div className="w-14 h-14 rounded-2xl bg-primary flex-shrink-0 flex items-center justify-center text-primary-foreground shadow-xl shadow-primary/30 relative z-10 transition-transform group-hover:scale-105">
+                        <item.icon className="h-6 w-6" />
                       </div>
-                      <div>
-                        <p className="text-sm text-muted-foreground">{item.label}</p>
-                        <p className="font-medium text-foreground">{item.value}</p>
+                      <div className="relative z-10 overflow-hidden">
+                        <p className="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-1">{item.label}</p>
+                        <p className="font-bold text-lg text-foreground truncate">{item.value}</p>
                       </div>
                     </div>
                   )}
@@ -133,8 +135,9 @@ export function ContactSection() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <div className="glass rounded-2xl p-8 glow-border">
-              <h3 className="text-xl font-semibold mb-6">Send a Message</h3>
+            <div className="glass-dark rounded-3xl p-8 md:p-10 border border-primary/20 bg-primary/[0.02] relative overflow-hidden group">
+              <div className="absolute top-0 -left-10 w-60 h-60 bg-primary/5 rounded-full blur-3xl pointer-events-none transition-all" />
+              <h3 className="text-2xl font-bold uppercase tracking-tight mb-8 relative z-10">Send a Message</h3>
 
               {isSubmitted ? (
                 <motion.div

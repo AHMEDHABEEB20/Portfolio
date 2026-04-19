@@ -6,8 +6,9 @@ import { HeroSection } from "@/components/sections/hero-section"
 import { AboutSection } from "@/components/sections/about-section"
 import { ExperienceSection } from "@/components/sections/experience-section"
 import { ProjectsSection } from "@/components/sections/projects-section"
+import { ExhibitionsSection } from "@/components/sections/exhibitions-section"
+import { PublicationsSection } from "@/components/sections/publications-section"
 import { SkillsSection } from "@/components/sections/skills-section"
-import { AchievementsSection } from "@/components/sections/achievements-section"
 import { ContactSection } from "@/components/sections/contact-section"
 import { Footer } from "@/components/footer"
 
@@ -26,8 +27,9 @@ export default function Portfolio() {
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
+        <ExhibitionsSection />
+        <PublicationsSection />
         <SkillsSection />
-        <AchievementsSection />
         <ContactSection />
       </main>
 
